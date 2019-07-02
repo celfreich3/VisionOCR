@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14810.11" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14766.13"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Camera-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController title="Camera" id="BYZ-38-t0r" customClass="CameraViewController" customModule="VisionOCR" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FXV-UF-5Pa" customClass="CameraInputView" customModule="VisionOCR" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AvE-2f-Nfc">
+                                        <rect key="frame" x="300" y="30" width="45" height="45"/>
+                                        <color key="backgroundColor" red="0.65490196079999996" green="0.65490196079999996" blue="0.65490196079999996" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="45" id="BUT-y4-fVA"/>
+                                            <constraint firstAttribute="height" constant="45" id="TWD-fW-tvD"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" image="camera.rotate" catalog="system"/>
+                                        <connections>
+                                            <action selector="tappedSwitchCamera:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9Ro-Iw-Rr8"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UIl-bm-JVX">
+                                        <rect key="frame" x="300" y="80" width="45" height="45"/>
+                                        <color key="backgroundColor" red="0.65490196079999996" green="0.65490196079999996" blue="0.65490196079999996" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="45" id="Me1-4m-I1a"/>
+                                            <constraint firstAttribute="height" constant="45" id="Mqx-Zf-bu6"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" image="light.min" catalog="system"/>
+                                        <connections>
+                                            <action selector="tappedToggleFlashlight:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hr5-0v-sXv"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="UIl-bm-JVX" secondAttribute="trailing" constant="30" id="DRJ-2b-l3i"/>
+                                    <constraint firstItem="AvE-2f-Nfc" firstAttribute="top" secondItem="FXV-UF-5Pa" secondAttribute="top" constant="30" id="Ke8-73-oGj"/>
+                                    <constraint firstAttribute="trailing" secondItem="AvE-2f-Nfc" secondAttribute="trailing" constant="30" id="Mk2-Jq-znP"/>
+                                    <constraint firstItem="UIl-bm-JVX" firstAttribute="top" secondItem="AvE-2f-Nfc" secondAttribute="bottom" constant="5" id="zNh-Sz-FSK"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="FXV-UF-5Pa" secondAttribute="trailing" id="JoM-af-gBm"/>
+                            <constraint firstItem="FXV-UF-5Pa" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="lvJ-mR-Lva"/>
+                            <constraint firstAttribute="bottom" secondItem="FXV-UF-5Pa" secondAttribute="bottom" id="veG-HH-sIC"/>
+                            <constraint firstItem="FXV-UF-5Pa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="yoO-J1-cTu"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="cameraInputView" destination="FXV-UF-5Pa" id="aPU-sU-bID"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="133" y="109"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="camera.rotate" catalog="system" width="64" height="48"/>
+        <image name="light.min" catalog="system" width="64" height="38"/>
+    </resources>
+</document>

@@ -9,21 +9,25 @@
 /* Begin PBXBuildFile section */
 		AA76C12E22C50D6500E07167 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA76C12D22C50D6500E07167 /* AppDelegate.swift */; };
 		AA76C13022C50D6500E07167 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA76C12F22C50D6500E07167 /* SceneDelegate.swift */; };
-		AA76C13222C50D6500E07167 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA76C13122C50D6500E07167 /* ViewController.swift */; };
-		AA76C13522C50D6500E07167 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA76C13322C50D6500E07167 /* Main.storyboard */; };
+		AA76C13222C50D6500E07167 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA76C13122C50D6500E07167 /* CameraViewController.swift */; };
+		AA76C13522C50D6500E07167 /* Camera.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA76C13322C50D6500E07167 /* Camera.storyboard */; };
 		AA76C13722C50D6600E07167 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA76C13622C50D6600E07167 /* Assets.xcassets */; };
 		AA76C13A22C50D6600E07167 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA76C13822C50D6600E07167 /* LaunchScreen.storyboard */; };
+		AA76C14222C50F0100E07167 /* CameraInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA76C14122C50F0100E07167 /* CameraInputView.swift */; };
+		AA76C14422C531E400E07167 /* CameraBlueprints.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA76C14322C531E400E07167 /* CameraBlueprints.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		AA76C12A22C50D6500E07167 /* VisionOCR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VisionOCR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA76C12D22C50D6500E07167 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AA76C12F22C50D6500E07167 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		AA76C13122C50D6500E07167 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		AA76C13422C50D6500E07167 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AA76C13122C50D6500E07167 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		AA76C13422C50D6500E07167 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Camera.storyboard; sourceTree = "<group>"; };
 		AA76C13622C50D6600E07167 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AA76C13922C50D6600E07167 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AA76C13B22C50D6600E07167 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA76C14122C50F0100E07167 /* CameraInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraInputView.swift; sourceTree = "<group>"; };
+		AA76C14322C531E400E07167 /* CameraBlueprints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraBlueprints.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +60,49 @@
 		AA76C12C22C50D6500E07167 /* VisionOCR */ = {
 			isa = PBXGroup;
 			children = (
-				AA76C12D22C50D6500E07167 /* AppDelegate.swift */,
-				AA76C12F22C50D6500E07167 /* SceneDelegate.swift */,
-				AA76C13122C50D6500E07167 /* ViewController.swift */,
-				AA76C13322C50D6500E07167 /* Main.storyboard */,
-				AA76C13622C50D6600E07167 /* Assets.xcassets */,
-				AA76C13822C50D6600E07167 /* LaunchScreen.storyboard */,
 				AA76C13B22C50D6600E07167 /* Info.plist */,
+				AA76C14622C5328500E07167 /* App */,
 			);
 			path = VisionOCR;
+			sourceTree = "<group>";
+		};
+		AA76C14522C531FF00E07167 /* Blueprints */ = {
+			isa = PBXGroup;
+			children = (
+				AA76C14322C531E400E07167 /* CameraBlueprints.swift */,
+			);
+			path = Blueprints;
+			sourceTree = "<group>";
+		};
+		AA76C14622C5328500E07167 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				AA76C14722C5329200E07167 /* Camera */,
+				AA76C12D22C50D6500E07167 /* AppDelegate.swift */,
+				AA76C12F22C50D6500E07167 /* SceneDelegate.swift */,
+				AA76C13622C50D6600E07167 /* Assets.xcassets */,
+				AA76C13822C50D6600E07167 /* LaunchScreen.storyboard */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		AA76C14722C5329200E07167 /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+				AA76C14822C532B600E07167 /* UI */,
+				AA76C14522C531FF00E07167 /* Blueprints */,
+				AA76C13122C50D6500E07167 /* CameraViewController.swift */,
+			);
+			path = Camera;
+			sourceTree = "<group>";
+		};
+		AA76C14822C532B600E07167 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				AA76C14122C50F0100E07167 /* CameraInputView.swift */,
+				AA76C13322C50D6500E07167 /* Camera.storyboard */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,7 +165,7 @@
 			files = (
 				AA76C13A22C50D6600E07167 /* LaunchScreen.storyboard in Resources */,
 				AA76C13722C50D6600E07167 /* Assets.xcassets in Resources */,
-				AA76C13522C50D6500E07167 /* Main.storyboard in Resources */,
+				AA76C13522C50D6500E07167 /* Camera.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,7 +176,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA76C13222C50D6500E07167 /* ViewController.swift in Sources */,
+				AA76C14422C531E400E07167 /* CameraBlueprints.swift in Sources */,
+				AA76C14222C50F0100E07167 /* CameraInputView.swift in Sources */,
+				AA76C13222C50D6500E07167 /* CameraViewController.swift in Sources */,
 				AA76C12E22C50D6500E07167 /* AppDelegate.swift in Sources */,
 				AA76C13022C50D6500E07167 /* SceneDelegate.swift in Sources */,
 			);
@@ -147,12 +187,12 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		AA76C13322C50D6500E07167 /* Main.storyboard */ = {
+		AA76C13322C50D6500E07167 /* Camera.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				AA76C13422C50D6500E07167 /* Base */,
 			);
-			name = Main.storyboard;
+			name = Camera.storyboard;
 			sourceTree = "<group>";
 		};
 		AA76C13822C50D6600E07167 /* LaunchScreen.storyboard */ = {
@@ -285,16 +325,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = U8N5WSA6CL;
 				INFOPLIST_FILE = VisionOCR/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.CESoftware.VisionOCR;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -303,16 +345,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = U8N5WSA6CL;
 				INFOPLIST_FILE = VisionOCR/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.CESoftware.VisionOCR;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
